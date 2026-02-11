@@ -130,19 +130,19 @@
         },
       ],
     },
-    {
-      id: "zhao2024dropletmask",
-      title: "DropletMask: Leveraging visual data for droplet impact analysis",
-      authors: "Chuanning Zhao, Youngjoon Suh, Yoonjin Won",
-      year: 2024,
-      topics: [],
-      selected: true,
-      thumb: "https://onlinelibrary.wiley.com/cms/asset/9499ac02-5b44-4cdf-9f01-72d373d7f5df/dro2154-gra-0001-m.jpg",
-      venues: [
-        {
-          venue: "Droplet, 2024, 3(4): e137",
-          links: [
-            { label: "Paper", href: "https://onlinelibrary.wiley.com/doi/full/10.1002/dro2.137" },
+	    {
+	      id: "zhao2024dropletmask",
+	      title: "DropletMask: Leveraging visual data for droplet impact analysis",
+	      authors: "Chuanning Zhao, Youngjoon Suh, Yoonjin Won",
+	      year: 2024,
+	      topics: [],
+	      selected: true,
+	      thumb: "assets/publications/zhao2024dropletmask.jpg",
+	      venues: [
+	        {
+	          venue: "Droplet, 2024, 3(4): e137",
+	          links: [
+	            { label: "Paper", href: "https://onlinelibrary.wiley.com/doi/full/10.1002/dro2.137" },
             { label: "Cover Art", href: "https://onlinelibrary.wiley.com/doi/abs/10.1002/dro2.154" },
           ],
         },
@@ -152,14 +152,15 @@
       id: "huang2024modeling",
       title: "Modeling Flow Boiling Utilizing Machine Learning Vision Data",
       authors: "Cho-Ning Huang, Sanghyeon Chang, Youngjoon Suh, Yoonjin Won, Chirag R Kharangate",
-      year: 2024,
-      topics: [],
-      selected: true,
-      venues: [
-        {
-          venue: "2024 23rd IEEE ITherm, 2024, pp. 1-6",
-          links: [
-            {
+	      year: 2024,
+	      topics: [],
+	      selected: true,
+	      thumb: "assets/publications/huang2024modeling.jpg",
+	      venues: [
+	        {
+	          venue: "2024 23rd IEEE ITherm, 2024, pp. 1-6",
+	          links: [
+	            {
               label: "Paper",
               href: "https://www.sciencedirect.com/science/article/pii/S0301932224002052",
             },
@@ -191,14 +192,15 @@
       title: "Report on the Tenth US-Japan Joint Seminar on Nanoscale Transport Phenomena",
       authors:
         "Renkun Chen, Chuanhua Duan, Takuma Hori, Wei-Lun Hsu, Yongjie Hu, Takafumi Ishibe, Gota Kikugawa, Yaerim Lee, Amy Marconnet, Austin J Minnich, and others",
-      year: 2024,
-      topics: [],
-      selected: true,
-      venues: [
-        {
-          venue: "Nanoscale and Microscale Thermophysical Engineering (Taylor & Francis), 2024, 28(4): 176-193",
-          links: [
-            {
+	      year: 2024,
+	      topics: [],
+	      selected: true,
+	      thumb: "assets/publications/chen2024report.jpeg",
+	      venues: [
+	        {
+	          venue: "Nanoscale and Microscale Thermophysical Engineering (Taylor & Francis), 2024, 28(4): 176-193",
+	          links: [
+	            {
               label: "Paper",
               href: "https://www.tandfonline.com/doi/abs/10.1080/15567265.2024.2439788",
             },
