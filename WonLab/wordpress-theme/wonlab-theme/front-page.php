@@ -1,0 +1,448 @@
+<?php
+get_header();
+
+$base = trailingslashit(get_stylesheet_directory_uri());
+?>
+
+<main class="container" id="home">
+  <section class="hero">
+    <div class="hero-photo">
+      <img
+        src="<?php echo esc_url($base . 'assets/profile.jpg'); ?>"
+        alt="Portrait"
+        onerror="this.onerror=null;this.src='<?php echo esc_js($base . 'assets/avatar.svg'); ?>';"
+      />
+    </div>
+    <div class="hero-info">
+      <h1>Yoonjin Won</h1>
+      <p class="meta">Professor, Samueli School of Engineering, University of California, Irvine</p>
+      <p class="meta">Director of Multidisciplinary University Research Initiatives (MURI), ML4HEAT</p>
+      <p class="meta">Principal Investigator of Won lab</p>
+      <p class="meta">Office: 4200 Engineering Gateway</p>
+      <p class="meta">Email: won@uci.edu</p>
+      <div class="icon-links" aria-label="Profile links">
+        <a
+          class="icon-link"
+          href="https://scholar.google.com/citations?user=PZ37kkwAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Scholar"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" role="img" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M12 3 1 8l11 5 9-4.09V16h2V8L12 3Zm0 12L4.5 11.5V16c0 2.76 3.58 5 7.5 5s7.5-2.24 7.5-5v-4.5L12 15Z"
+            />
+          </svg>
+        </a>
+        <a
+          class="icon-link"
+          href="https://www.linkedin.com/in/yoonjin-won/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" role="img" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 23.5h4V7.98h-4V23.5Zm7 0h4v-8.46c0-4.7 6-5.08 6 0v8.46h4V13.9c0-7.52-8.17-7.24-10-3.54V7.98h-4V23.5Z"
+            />
+          </svg>
+        </a>
+        <a class="icon-link" href="https://orcid.org/0000-0002-8838-6213" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+          <svg viewBox="0 0 24 24" width="20" height="20" role="img" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" />
+            <text
+              x="12"
+              y="15"
+              text-anchor="middle"
+              font-size="9"
+              font-family="Roboto, Arial, Helvetica, sans-serif"
+              font-weight="700"
+              fill="currentColor"
+            >
+              iD
+            </text>
+          </svg>
+        </a>
+        <a
+          class="icon-link"
+          href="https://engineering.uci.edu/users/yoonjin-won"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="UCI Profile"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" role="img" aria-hidden="true" focusable="false">
+            <rect x="3.5" y="5.5" width="17" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="2" />
+            <text
+              x="12"
+              y="15"
+              text-anchor="middle"
+              font-size="9"
+              font-family="Roboto, Arial, Helvetica, sans-serif"
+              font-weight="700"
+              fill="currentColor"
+              letter-spacing="0.6"
+            >
+              UCI
+            </text>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <aside class="hero-aside">
+      <h3>Research Communities</h3>
+      <ul>
+        <li>
+          <a href="https://engineering.uci.edu" target="_blank" rel="noopener noreferrer"
+            >University of California, Irvine, Engineering</a
+          >
+        </li>
+        <li><a href="#">MURI ML4HEAT</a></li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="bio">
+    <p>
+      Yoonjin Won is a Professor of Mechanical and Aerospace Engineering at the University of
+      California, Irvine, where she also holds courtesy appointments in Electrical Engineering
+      and Computer Science, as well as Materials Science and Engineering. She earned her PhD
+      from
+      <a href="https://nanoheat.stanford.edu" target="_blank" rel="noopener noreferrer"
+        >Stanford University (Nanoheat)</a
+      >
+      and her undergraduate degree from Seoul National University.
+    </p>
+  </section>
+
+  <section class="section" id="research">
+    <h2>Research</h2>
+    <p>
+      The Won Lab studies physical scene understanding as it relates to heat and mass transfer,
+      with a core mission of developing <span class="accent">physically eXplainable AI</span>
+      models for the physical sciences. We build machines that don't just predict; they see,
+      reason about, and explain the complex interactions of the physical world. Our research
+      investigates the physics-informed representations needed to make AI predictions truly
+      interpretable to scientists. We aim to answer fundamental questions about phase-change
+      phenomena by drawing inspiration from both first-principles thermodynamics and human-like
+      visual reasoning. Representative projects include <a href="#">VISION-iT</a>,
+      <a href="#">BubbleMask</a>, <a href="#">BubbleML</a>, and our frameworks for interpretable
+      digitalized bubble statistics.
+    </p>
+    <ul>
+      <li>
+        <strong>Interpretable Thermofluidics:</strong> Leveraging machine learning to decode the
+        underlying physics of phase-change phenomena. This research moves beyond black-box
+        pattern recognition to establish causal relationships in boiling and condensation heat
+        transfer.
+      </li>
+      <li>
+        <strong>Trustworthy Design Optimization:</strong> Developing heterogeneous surfaces
+        where AI-driven insights provide a clear physical rationale for specific nanostructure
+        geometries and surface textures in next-generation high-flux heat sinks.
+      </li>
+      <li>
+        <strong>Multi-Modal Sensor Fusion:</strong> Synthesizing high-fidelity data from
+        high-speed imaging, infrared thermography, and acoustic emissions to provide a
+        comprehensive, real-time diagnostic of various scenes.
+      </li>
+    </ul>
+  </section>
+
+  <section class="section" id="media">
+    <h2>Media</h2>
+    <p class="muted">Featured links (auto-preview; if a site blocks preview, the card falls back to the URL).</p>
+    <div id="media-grid" class="media-grid" aria-live="polite"></div>
+    <ul id="media-list" class="media-list"></ul>
+  </section>
+
+  <section class="section" id="group">
+    <h2>Group</h2>
+    <h3>Students</h3>
+    <div class="columns">
+      <ul>
+        <li><a href="#">Rasahd Kayal</a></li>
+        <li><a href="#">Tom Fu</a></li>
+        <li><a href="#">Sanghyeon Chang</a></li>
+        <li><a href="#">Xiaojing Zhang</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Chika MaduaBuchi</a></li>
+        <li><a href="#">Nicholas Choi</a></li>
+        <li><a href="#">Sorah Chung</a></li>
+        <li><a href="#">Yunbo Wang</a></li>
+      </ul>
+    </div>
+
+    <h3>Alumni</h3>
+    <ul class="alumni-list">
+      <li><a href="#">Chuanning Zhao</a> (PhD 2025) - Huawei</li>
+      <li><a href="#">Nicholas Choi</a> (MS 2025) - Panasonic</li>
+      <li>
+        <a href="https://www.linkedin.com/in/youngjoon-suh-phd-3a77381b2/" target="_blank" rel="noopener noreferrer"
+          >Youngjoon Suh</a
+        >
+        (PhD 2023, Postdoc 2025) - Assistant Professor, University of Illinois Chicago
+      </li>
+      <li><a href="#">Nhi Quach</a> (PhD 2024) - NNSA Postdoctoral Fellow, Lawrence Livermore National Laboratory</li>
+      <li><a href="#">Changsu Kim</a> (Visiting Scholar, 2024) - Hyundai Motors</li>
+      <li><a href="https://cfdlab.korea.ac.kr" target="_blank" rel="noopener noreferrer">Jaiyoung Ryu</a> (Visiting Scholar, 2023) - Professor, Korea University</li>
+      <li><a href="https://sites.google.com/site/kwkanglab/" target="_blank" rel="noopener noreferrer">Keonwook Kang</a> (Visiting Scholar, 2022) - Professor, Yonsei University</li>
+      <li><a href="#">Jewoo Park</a> (Visiting Scholar, 2022) - Hyundai Motors</li>
+      <li><a href="#">Hunjae Kim</a> (Visiting Scholar, 2022) - Hyundai Motors</li>
+      <li><a href="#">Cheng-Hui Lin</a> (PhD 2021) - Taiwan Research Lab</li>
+      <li><a href="#">Kimia Montazeri</a> (PhD 2021) - Google</li>
+      <li><a href="#">Jonggyu Lee</a> (PhD 2021) - Samsung Electronics</li>
+      <li><a href="#">Ilhwan Kim</a> (Visiting Scholar, 2021) - Samsung Electronics</li>
+      <li><a href="#">Quang Pham</a> (PhD 2020) - Northrop Grumman</li>
+      <li><a href="#">Michael Barako</a> (Visiting Scholar, 2020) - Northrop Grumman</li>
+      <li><a href="http://hylime.kr/?ckattempt=1" target="_blank" rel="noopener noreferrer">Jinseong Park</a> (Visiting Scholar, 2020) - Professor, Hanyang University</li>
+      <li><a href="https://scholar.google.com/citations?user=9JJkvQoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Shiwei Zhang</a> (Postdoc, 2019) - Professor, South China University of Technology</li>
+      <li><a href="#">Pranav Dubey</a> (MS 2017) - Intel</li>
+      <li><a href="#">Kuan-Wei Chen</a> (MS 2017) - TSMC</li>
+    </ul>
+  </section>
+
+  <section class="section" id="talks">
+    <div class="pub-header">
+      <h2>Talks</h2>
+      <div class="talks-controls" aria-label="Talk view">
+        <a class="talks-control" href="#talks-recent">View recent</a>
+        <a class="talks-control" href="#talks-all">View all</a>
+      </div>
+    </div>
+
+    <div class="talk-content pub-content" aria-live="polite">
+      <div id="talks-all" class="talks-view talks-view-all">
+        <ul class="talks">
+          <li>
+            <span class="talk-date">09/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Fundamentals of Machine Learning for Phase Change Heat Transfer <span class="chip">Invited</span></div>
+              <div class="talk-details">2025 UCI-TAU Conference, 2025, invited speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">08/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Fundamentals of Machine Learning for Phase Change Heat Transfer <span class="chip">Keynote</span></div>
+              <div class="talk-details">The 11th World Conference on Experimental Heat Transfer, Fluid Mechanics and Thermodynamics (ExHFT-11), Virtual, August 15-18, 2025, invited keynote speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">08/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Fundamentals of Machine Learning for Phase Change Heat Transfer <span class="chip">Invited</span></div>
+              <div class="talk-details">Mini-Workshop, Choong-Ang University, Aug 2025. Hosted by Prof. Hyoungsoon Lee.</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">08/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Machine Learning Applications in Two-Phase Heat Transfer for Advanced Thermal Management <span class="chip">Invited</span></div>
+              <div class="talk-details">International Seminar on Thermal Management in High-Density Data Centers, Seoul, South Korea, August 11-12 2025, invited speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">06/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Fundamentals of Machine Learning for Phase Change Heat Transfer <span class="chip">Panel</span></div>
+              <div class="talk-details">IIR Conference on Thermophysical Properties and Transport Processes of Refrigerants (TPTPR), the University of Maryland, June 15-18, 2025, invited panel speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">06/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Learning from Complexity: Machine Learning for Two-Phase Heat Transfer <span class="chip">Keynote</span></div>
+              <div class="talk-details">Micro Flow and Interfacial Phenomena (µFIP), June 2025, Santa Babara, CA, invited keynote speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">02/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Applications of Machine Learning for Phase Change Heat Transfer <span class="chip">Panel</span></div>
+              <div class="talk-details">ASME SHTC 2024, Feb. 2025, ASHRAE Winter Conference, Feb 4-8, Orlando, Florida, invited panel speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">11/2024</span>
+            <span class="talk-text">
+              <div class="talk-title">Emerging Technology Conference <span class="chip">Panel</span></div>
+              <div class="talk-details">Invited panel speaker, organized by Prof. and Dean A.-H. "Alissa" Park of UCLA.</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">10/2024</span>
+            <span class="talk-text">
+              <div class="talk-title">2024 IEEE Symposium on Reliability for Electronics and Photonics Packaging Reliability (SiPho) <span class="chip">Keynote</span></div>
+              <div class="talk-details">Theme: Reliability for Advanced Semiconductor Packaging, invited keynote speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">10/2024</span>
+            <span class="talk-text">
+              <div class="talk-title">Applications of Machine Learning for Heat Transfer in Electronics Cooling <span class="chip">Panel</span></div>
+              <div class="talk-details">ASME InterPACK 2024, Oct 2025, San Jose, California, invited panel speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">07/2024</span>
+            <span class="talk-text">
+              <div class="talk-title">Fundamentals of Machine Learning for Phase Change Heat Transfer <span class="chip">Panel</span></div>
+              <div class="talk-details">ASME SHTC 2024, July 2024, Anaheim, California, invited panel speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">05/2024</span>
+            <span class="talk-text">
+              <div class="talk-title">Artificial Intelligence: Industry use cases and investment trends <span class="chip">Panel</span></div>
+              <div class="talk-details">IEEE ITHERM 2024, May 2024, Denver, Colorado, invited panel speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">10/2023</span>
+            <span class="talk-text">
+              <div class="talk-title">Thermal Science, Engineering, and Management: AI and Machine Learning Perspectives <span class="chip">Moderator</span></div>
+              <div class="talk-details">ASME InterPACK 2023, Oct 2023, San Diego, California, panel moderator</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">07/2023</span>
+            <span class="talk-text">
+              <div class="talk-title">Accelerating Thermal Science with AI <span class="chip">Invited</span></div>
+              <div class="talk-details">10th US-Japan Joint Seminar on Nanoscale Transport Phenomena, July 2023, San Diego, California, USA, invited speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">06/2023</span>
+            <span class="talk-text">
+              <div class="talk-title">Artificial Intelligence: Industry use cases and investment trends <span class="chip">Panel</span></div>
+              <div class="talk-details">IEEE ITHERM 2023, June 2023, Orlando, Florida, panel speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">03/2023</span>
+            <span class="talk-text">
+              <div class="talk-title">Artificial Intelligence for Two Phase Heat Transfer <span class="chip">Invited</span></div>
+              <div class="talk-details">8TH American Society of Thermal Fluids Engineering Conference, March 2023, College Park, Maryland, TEC talk, invited talk speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">01/2023</span>
+            <span class="talk-text">
+              <div class="talk-title">Learning Thermal Energy Science via Artificial Intelligent Techniques <span class="chip">Invited</span></div>
+              <div class="talk-details">Gordon Research Conference, Jan 2023, Italy, invited speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">08/2022</span>
+            <span class="talk-text">
+              <div class="talk-title">Advancing Thermal Energy Science on Bio-inspired Nanostructures via Artificial Intelligent Technologies <span class="chip">Keynote</span></div>
+              <div class="talk-details">Nature Inspired Surface Engineering (NISE 2022), Aug 2022, invited keynote speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">04/2022</span>
+            <span class="talk-text">
+              <div class="talk-title">The convergence of phase change phenomena, data, and art <span class="chip">Talk</span></div>
+              <div class="talk-details">Seoul National University Alumni Forum, April 2022. Hosted by Prof. Thomas Han.</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">12/2021</span>
+            <span class="talk-text">
+              <div class="talk-title">The design of porous materials through machine learning algorithms <span class="chip">Keynote</span></div>
+              <div class="talk-details">MRS Fall meeting, Dec 2021, keynote speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">10/2021</span>
+            <span class="talk-text">
+              <div class="talk-title">Issues, challenges, and future opportunities for nanomaterials integration into large systems <span class="chip">Moderator</span></div>
+              <div class="talk-details">ASME InterPACK 2021, Oct 2021, panel moderator</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">10/2021</span>
+            <span class="talk-text">
+              <div class="talk-title">AI innovations, data-centric thinking, and opportunities in thermofluidic topics <span class="chip">Talk</span></div>
+              <div class="talk-details">mTAS, Oct 2021, workshop speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">06/2021</span>
+            <span class="talk-text">
+              <div class="talk-title">AI innovations, data-centric thinking, and opportunities in thermofluidic topics <span class="chip">Invited</span></div>
+              <div class="talk-details">K-16 Hotspot placeholder, June 2021, invited speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">06/2021</span>
+            <span class="talk-text">
+              <div class="talk-title">AI innovations, data-centric thinking, and opportunities in thermofluidic topics <span class="chip">Keynote</span></div>
+              <div class="talk-details">Micro Flow and Interfacial Phenomena, Virtual Version, June 2021, keynote speaker</div>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div id="talks-recent" class="talks-view talks-view-recent">
+        <ul class="talks">
+          <li>
+            <span class="talk-date">09/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Fundamentals of Machine Learning for Phase Change Heat Transfer <span class="chip">Invited</span></div>
+              <div class="talk-details">2025 UCI-TAU Conference, 2025, invited speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">08/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Fundamentals of Machine Learning for Phase Change Heat Transfer <span class="chip">Keynote</span></div>
+              <div class="talk-details">The 11th World Conference on Experimental Heat Transfer, Fluid Mechanics and Thermodynamics (ExHFT-11), Virtual, August 15-18, 2025, invited keynote speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">08/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Fundamentals of Machine Learning for Phase Change Heat Transfer <span class="chip">Invited</span></div>
+              <div class="talk-details">Mini-Workshop, Choong-Ang University, Aug 2025. Hosted by Prof. Hyoungsoon Lee.</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">08/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Machine Learning Applications in Two-Phase Heat Transfer for Advanced Thermal Management <span class="chip">Invited</span></div>
+              <div class="talk-details">International Seminar on Thermal Management in High-Density Data Centers, Seoul, South Korea, August 11-12 2025, invited speaker</div>
+            </span>
+          </li>
+          <li>
+            <span class="talk-date">06/2025</span>
+            <span class="talk-text">
+              <div class="talk-title">Fundamentals of Machine Learning for Phase Change Heat Transfer <span class="chip">Panel</span></div>
+              <div class="talk-details">IIR Conference on Thermophysical Properties and Transport Processes of Refrigerants (TPTPR), the University of Maryland, June 15-18, 2025, invited panel speaker</div>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="publications">
+    <div class="pub-header">
+      <h2>Publications</h2>
+      <div class="pub-controls" role="group" aria-label="Publication view">
+        <button class="pub-toggle" type="button" data-mode="selected" aria-pressed="true">Show selected</button>
+        <button class="pub-toggle" type="button" data-mode="date" aria-pressed="false">Show all by date</button>
+      </div>
+    </div>
+
+    <nav class="pub-nav" aria-label="Publication filters"></nav>
+    <div id="pub-content" class="pub-content" aria-live="polite"></div>
+  </section>
+</main>
+
+<?php
+get_footer();
+

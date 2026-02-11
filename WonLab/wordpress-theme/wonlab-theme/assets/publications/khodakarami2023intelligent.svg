@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-label="Advances in Heat Transfer (Volume 56) cover">
+  <defs>
+    <style>
+      .title { font: 700 56px Roboto, Arial, sans-serif; letter-spacing: 0.5px; fill: #f5d7a6; }
+      .sub   { font: 500 28px Roboto, Arial, sans-serif; fill: #f5d7a6; opacity: 0.9; }
+      .small { font: 500 24px Roboto, Arial, sans-serif; fill: #f5d7a6; opacity: 0.85; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="1200" fill="#7b0a2a"/>
+
+  <text x="450" y="220" text-anchor="middle" class="title">Advances in Heat Transfer</text>
+  <text x="450" y="290" text-anchor="middle" class="sub">Khodakarami • Suh • Won • Miljkovic</text>
+
+  <g transform="translate(450 560)">
+    <path d="M0 -38 L34 20 L-34 20 Z" fill="#f5d7a6" opacity="0.85"/>
+    <path d="M0 56 L34 114 L-34 114 Z" fill="#f5d7a6" opacity="0.55"/>
+    <path d="M-62 10 L-28 68 L-96 68 Z" fill="#f5d7a6" opacity="0.65"/>
+    <path d="M62 10 L96 68 L28 68 Z" fill="#f5d7a6" opacity="0.65"/>
+  </g>
+
+  <text x="450" y="940" text-anchor="middle" class="small">An intelligent strategy for</text>
+  <text x="450" y="980" text-anchor="middle" class="small">phase change heat and mass transfer</text>
+  <text x="450" y="1040" text-anchor="middle" class="sub">Volume 56</text>
+</svg>
+

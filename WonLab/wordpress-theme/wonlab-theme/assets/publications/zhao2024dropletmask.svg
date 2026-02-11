@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1f8"/>
+      <stop offset="1" stop-color="#ffe0f1"/>
+    </linearGradient>
+    <linearGradient id="droplet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0218a"/>
+      <stop offset="1" stop-color="#c91575"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <clipPath id="dropletClip">
+      <path d="M480 128 C460 190 380 258 332 326 C274 410 296 520 372 592 C444 658 516 670 588 592 C664 520 686 410 628 326 C580 258 500 190 480 128 Z"/>
+    </clipPath>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#ffffff" stroke-opacity="0.34" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="960" height="720" fill="url(#bg)"/>
+
+  <circle cx="760" cy="120" r="160" fill="#e0218a" opacity="0.10"/>
+  <circle cx="160" cy="640" r="220" fill="#e0218a" opacity="0.06"/>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="72" width="816" height="576" rx="26" fill="#ffffff"/>
+  </g>
+
+  <g transform="translate(0, 0)">
+    <g clip-path="url(#dropletClip)">
+      <rect x="260" y="90" width="440" height="560" fill="url(#droplet)"/>
+      <rect x="260" y="90" width="440" height="560" fill="url(#grid)"/>
+      <circle cx="420" cy="420" r="94" fill="#ffffff" opacity="0.18"/>
+      <circle cx="560" cy="470" r="68" fill="#ffffff" opacity="0.14"/>
+    </g>
+    <path d="M480 128 C460 190 380 258 332 326 C274 410 296 520 372 592 C444 658 516 670 588 592 C664 520 686 410 628 326 C580 258 500 190 480 128 Z"
+      fill="none" stroke="#7a1a55" stroke-opacity="0.18" stroke-width="10"/>
+  </g>
+
+  <text x="120" y="168" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="34" font-weight="900" fill="#0f172a">
+    DropletMask
+  </text>
+  <text x="120" y="212" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#475569">
+    Visual data → droplet impact analysis
+  </text>
+
+  <g>
+    <rect x="120" y="560" width="250" height="48" rx="16" fill="#e0218a" opacity="0.92"/>
+    <text x="245" y="592" text-anchor="middle" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#ffffff">
+      Cover Art
+    </text>
+  </g>
+</svg>
