@@ -2,18 +2,20 @@
 (function () {
   const YEAR_BUCKET_CUTOFF = 2014; // 2014 and before
 
-  // Replace this list with your real publications.
-  /** @type {Array<{
-   *  id: string,
-   *  title: string,
-   *  authors: string,
-   *  year: number,
-   *  topics: string[],
-   *  thumb?: string,
-   *  selected?: boolean,
-   *  highlights?: string[],
-   *  venues?: Array<{
-   *    venue: string,
+	  // Replace this list with your real publications.
+	  /** @type {Array<{
+	   *  id: string,
+	   *  title: string,
+	   *  authors: string,
+	   *  year: number,
+	   *  topics: string[],
+	   *  thumb?: string,
+	   *  video?: string,
+	   *  videoAutoplay?: boolean,
+	   *  selected?: boolean,
+	   *  highlights?: string[],
+	   *  venues?: Array<{
+	   *    venue: string,
    *    venueUrl?: string,
    *    links?: Array<{ label: string, href: string }>
    *  }>,
@@ -43,18 +45,20 @@
         },
       ],
     },
-    {
-      id: "chang2026spatiotemporal",
-      title: "Spatiotemporal Learning in Power Modules: Wavelet-Enhanced Forecasting of Thermomechanical Degradation",
-      authors: "Sanghyeon Chang, Paul Paret, Sreekant Narumanchi, Yoonjin Won",
-      year: 2026,
-      topics: [],
-      selected: true,
-      venues: [
-        {
-          venue: "IEEE Transactions on Components, Packaging and Manufacturing Technology, 2026",
-          links: [
-            {
+	    {
+	      id: "chang2026spatiotemporal",
+	      title: "Spatiotemporal Learning in Power Modules: Wavelet-Enhanced Forecasting of Thermomechanical Degradation",
+	      authors: "Sanghyeon Chang, Paul Paret, Sreekant Narumanchi, Yoonjin Won",
+	      year: 2026,
+	      topics: [],
+	      selected: true,
+	      video: "assets/publications/neurontree.mov",
+	      videoAutoplay: true,
+	      venues: [
+	        {
+	          venue: "IEEE Transactions on Components, Packaging and Manufacturing Technology, 2026",
+	          links: [
+	            {
               label: "Paper",
               href: "https://ieeexplore.ieee.org/abstract/document/11359243",
             },
@@ -82,20 +86,21 @@
         },
       ],
     },
-    {
-      id: "chang2025eventflow",
-      title: "EventFlow: Real-Time Neuromorphic Event-Driven Classification of Two-Phase Boiling Flow Regimes",
-      authors: "Sanghyeon Chang, Srikar Arani, Nishant Sai Nuthalapati, Youngjoon Suh, Nicholas Choi, Siavash Khodakarami, Md Rakibul Hasan Roni, Nenad Miljkovic, Aparna Chandramowlishwaran, Yoonjin Won",
-      year: 2025,
-      topics: [],
-      selected: true,
-      venues: [
-        {
-          venue: "arXiv preprint (arXiv:2511.05467), 2025",
-          links: [{ label: "Paper", href: "https://arxiv.org/abs/2511.05467" }],
-        },
-      ],
-    },
+	    {
+	      id: "chang2025eventflow",
+	      title: "EventFlow: Real-Time Neuromorphic Event-Driven Classification of Two-Phase Boiling Flow Regimes",
+	      authors: "Sanghyeon Chang, Srikar Arani, Nishant Sai Nuthalapati, Youngjoon Suh, Nicholas Choi, Siavash Khodakarami, Md Rakibul Hasan Roni, Nenad Miljkovic, Aparna Chandramowlishwaran, Yoonjin Won",
+	      year: 2025,
+	      topics: [],
+	      selected: true,
+	      thumb: "assets/publications/EventFlow2.gif",
+	      venues: [
+	        {
+	          venue: "arXiv preprint (arXiv:2511.05467), 2025",
+	          links: [{ label: "Paper", href: "https://arxiv.org/abs/2511.05467" }],
+	        },
+	      ],
+	    },
     {
       id: "fu2025data",
       title: "Data-Driven Optical To Thermal Inference in Pool Boiling Using Generative Adversarial Networks",
@@ -118,6 +123,7 @@
       year: 2025,
       topics: [],
       selected: true,
+      thumb: "assets/publications/chang2025predicting.png",
       venues: [
         {
           venue: "2025 24th IEEE ITherm, 2025, pp. 1-7",
@@ -175,6 +181,7 @@
       year: 2024,
       topics: [],
       selected: true,
+      thumb: "assets/publications/far2024car.png",
       venues: [
         {
           venue: "International Electronic Packaging Technical Conference and Exhibition (ASME), 2024, 88469: V001T07A001",
@@ -208,19 +215,20 @@
         },
       ],
     },
-    {
-      id: "lu2024rapid",
-      title: "Rapid identification of boiling crisis with event-based visual streaming analysis",
-      authors: "Dale Lu, Youngjoon Suh, Yoonjin Won",
-      year: 2024,
-      topics: [],
-      selected: true,
-      thumb: "https://ars.els-cdn.com/content/image/1-s2.0-S1359431123020331-ga1_lrg.jpg",
-      venues: [
-        {
-          venue: "Applied Thermal Engineering (Pergamon), 2024, 239: 122004",
-          links: [
-            {
+	    {
+	      id: "lu2024rapid",
+	      title: "Rapid identification of boiling crisis with event-based visual streaming analysis",
+	      authors: "Dale Lu, Youngjoon Suh, Yoonjin Won",
+	      year: 2024,
+	      topics: [],
+	      selected: true,
+	      video: "assets/publications/EventPool.mov",
+	      videoAutoplay: true,
+	      venues: [
+	        {
+	          venue: "Applied Thermal Engineering (Pergamon), 2024, 239: 122004",
+	          links: [
+	            {
               label: "Paper",
               href: "https://www.sciencedirect.com/science/article/abs/pii/S1359431123020331",
             },
@@ -290,19 +298,26 @@
         },
       ],
     },
-    {
-      id: "kim2024effects",
-      title: "Effects of eccentricity in tube--pod arrangements on hyperloop aerodynamics",
-      authors: "Jihoon Kim, Changyoung Lee, Thi Thanh Giang Le, Dokyun Kim, Yoonjin Won, Minki Cho, Jaiyoung Ryu",
-      year: 2024,
-      topics: [],
-      selected: true,
-      venues: [
-        {
-          venue: "International Journal of Mechanical Sciences (Pergamon), 2024, 279: 109505",
-        },
-      ],
-    },
+	    {
+	      id: "kim2024effects",
+	      title: "Effects of eccentricity in tube--pod arrangements on hyperloop aerodynamics",
+	      authors: "Jihoon Kim, Changyoung Lee, Thi Thanh Giang Le, Dokyun Kim, Yoonjin Won, Minki Cho, Jaiyoung Ryu",
+	      year: 2024,
+	      topics: [],
+	      selected: true,
+	      thumb: "https://ars.els-cdn.com/content/image/1-s2.0-S0020740324005472-ga1_lrg.jpg",
+	      venues: [
+	        {
+	          venue: "International Journal of Mechanical Sciences (Pergamon), 2024, 279: 109505",
+	          links: [
+	            {
+	              label: "Paper",
+	              href: "https://www.sciencedirect.com/science/article/pii/S0020740324005472",
+	            },
+	          ],
+	        },
+	      ],
+	    },
     {
       id: "montazeri2023interfacial",
       title: "Interfacial Features Govern Nanoscale Jumping Droplets",
@@ -318,19 +333,19 @@
         },
       ],
     },
-    {
-      id: "hassan2023bubbleml",
-      title: "BubbleML: A multiphase multiphysics dataset and benchmarks for machine learning",
-      authors:
-        "Sheikh Md Shakeel Hassan, Arthur Feeney, Akash Dhruv, Jihoon Kim, Youngjoon Suh, Jaiyoung Ryu, Yoonjin Won, Aparna Chandramowlishwaran",
-      year: 2023,
-      topics: [],
-      selected: true,
-      thumb: "assets/publications/hassan2023bubbleml.jpg",
-      venues: [
-        {
-          venue: "Advances in Neural Information Processing Systems, 2023, 36: 418-449",
-        },
+	    {
+	      id: "hassan2023bubbleml",
+	      title: "BubbleML: A multiphase multiphysics dataset and benchmarks for machine learning",
+	      authors:
+	        "Sheikh Md Shakeel Hassan, Arthur Feeney, Akash Dhruv, Jihoon Kim, Youngjoon Suh, Jaiyoung Ryu, Yoonjin Won, Aparna Chandramowlishwaran",
+	      year: 2023,
+	      topics: [],
+	      selected: true,
+	      thumb: "assets/publications/hassan2023bubbleml.gif",
+	      venues: [
+	        {
+	          venue: "Advances in Neural Information Processing Systems, 2023, 36: 418-449",
+	        },
         {
           venue: "arXiv preprint (arXiv:2307.14623), 2023",
           links: [{ label: "Paper", href: "https://arxiv.org/abs/2307.14623" }],
@@ -379,6 +394,7 @@
       year: 2023,
       topics: [],
       selected: true,
+      thumb: "assets/publications/quach2022machine.png",
       venues: [
         {
           venue: "Journal of Electronic Packaging (ASME), 2023, 145(4): 044501",
@@ -411,41 +427,32 @@
 	      venues: [
 	        {
 	          venue: "Langmuir (ACS), 2023, 40(1): 39-51",
+		          links: [
+		            {
+	              label: "Paper",
+	              href: "https://pubs.acs.org/doi/10.1021/acs.langmuir.3c01276",
+	            },
+	            {
+	              label: "Cover Art",
+	              href: "https://pubs.acs.org/doi/10.1021/acs.langmuir.3c01276",
+	            },
+	          ],
+	        },
+	      ],
+	    },
+	    {
+	      id: "khodakarami2022machine",
+	      title: "Machine learning enabled condensation heat transfer measurement",
+	      authors: "Siavash Khodakarami, Kazi Fazle Rabbi, Youngjoon Suh, Yoonjin Won, Nenad Miljkovic",
+	      year: 2022,
+	      topics: [],
+	      selected: true,
+	      thumb: "https://ars.els-cdn.com/content/image/1-s2.0-S0017931022004896-ga1_lrg.jpg",
+	      venues: [
+	        {
+	          venue: "International Journal of Heat and Mass Transfer, 2022, 194: 123016",
 	          links: [
 	            {
-              label: "Paper",
-              href: "https://pubs.acs.org/doi/10.1021/acs.langmuir.3c01276",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: "kharangate4740495machine",
-      title:
-        "Machine Learning Boiling Prediction: From Autonomous Vision of Flow Visualization Data to Performance Parameter Theoretical Modeling",
-      authors: "Chirag Kharangate, Cho-Ning Huang, Sanghyeon Chang, Youngjoon Suh, Issam Mudawar, Yoonjin Won",
-      year: 2023,
-      topics: [],
-      selected: true,
-      venues: [
-        {
-          venue: "SSRN (4740495), 2023",
-        },
-      ],
-    },
-    {
-      id: "khodakarami2022machine",
-      title: "Machine learning enabled condensation heat transfer measurement",
-      authors: "Siavash Khodakarami, Kazi Fazle Rabbi, Youngjoon Suh, Yoonjin Won, Nenad Miljkovic",
-      year: 2022,
-      topics: [],
-      selected: true,
-      venues: [
-        {
-          venue: "International Journal of Heat and Mass Transfer, 2022, 194: 123016",
-          links: [
-            {
               label: "Paper",
               href: "https://www.sciencedirect.com/science/article/abs/pii/S0017931022004896",
             },
@@ -472,20 +479,20 @@
         },
       ],
     },
-    {
-      id: "lee2022computer",
-      title:
-        "Computer vision-assisted investigation of boiling heat transfer on segmented nanowires with vertical wettability",
-      authors: "Jonggyu Lee, Youngjoon Suh, Max Kuciej, Peter Simadiris, Michael T Barako, Yoonjin Won",
-      year: 2022,
-      topics: [],
-      selected: true,
-      thumb:
-        "https://media.licdn.com/dms/image/v2/C4E22AQFH-srC8tYnIQ/feedshare-shrink_800/feedshare-shrink_800/0/1664071862269?e=1772064000&v=beta&t=wswfK4xJXGlNeq0UbBN0kW9TAxE1jnBQl_SLpWD7kEo",
-      venues: [
-        {
-          venue: "Nanoscale, 2022, 14(36): 13078-13089",
-          links: [
+	    {
+	      id: "lee2022computer",
+	      title:
+	        "Computer vision-assisted investigation of boiling heat transfer on segmented nanowires with vertical wettability",
+	      authors: "Jonggyu Lee, Youngjoon Suh, Max Kuciej, Peter Simadiris, Michael T Barako, Yoonjin Won",
+	      year: 2022,
+	      topics: [],
+	      selected: true,
+	      video: "assets/publications/lee2022computer.mp4",
+	      videoAutoplay: true,
+	      venues: [
+	        {
+	          venue: "Nanoscale, 2022, 14(36): 13078-13089",
+	          links: [
             {
               label: "Paper",
               href: "https://pubs.rsc.org/en/content/articlelanding/2022/nr/d2nr02447k",
@@ -522,18 +529,19 @@
         },
       ],
     },
-    {
-      id: "quach2022machine",
-      title: "Machine Learning Enables Autonomous Vehicles Under Extreme Environmental Conditions",
-      authors: "Nhi V Quach, Jewoo Park, Yonghwi Kim, Ruey-Hwa Cheng, Michal Jenco, Alex K Lee, Chenxi Yin, Yoonjin Won",
-      year: 2022,
-      topics: [],
-      selected: true,
-      venues: [
-        {
-          venue: "International Electronic Packaging Technical Conference and Exhibition (ASME), 2022, 86557: V001T04A001",
-          links: [
-            {
+	    {
+	      id: "quach2022machine",
+	      title: "Machine Learning Enables Autonomous Vehicles Under Extreme Environmental Conditions",
+	      authors: "Nhi V Quach, Jewoo Park, Yonghwi Kim, Ruey-Hwa Cheng, Michal Jenco, Alex K Lee, Chenxi Yin, Yoonjin Won",
+	      year: 2022,
+	      topics: [],
+	      selected: true,
+	      thumb: "assets/publications/quach2022machine.png",
+	      venues: [
+	        {
+	          venue: "International Electronic Packaging Technical Conference and Exhibition (ASME), 2022, 86557: V001T04A001",
+	          links: [
+	            {
               label: "Paper",
               href: "https://asmedigitalcollection.asme.org/InterPACK/proceedings-abstract/InterPACK2022/86557/V001T04A001/1153403",
             },
@@ -541,31 +549,125 @@
         },
       ],
     },
+	    {
+	      id: "suh2021deep",
+	      title: "A deep learning perspective on dropwise condensation",
+	      authors:
+	        "Youngjoon Suh, Jonggyu Lee, Peter Simadiris, Xiao Yan, Soumyadip Sett, Longnan Li, Kazi Fazle Rabbi, Nenad Miljkovic, Yoonjin Won",
+	      year: 2021,
+	      topics: [],
+	      selected: true,
+	      thumb: "assets/publications/suh2021deep_cover.pdf",
+	      venues: [
+	        {
+	          venue: "Advanced Science, 2021, 8(22): 2101794",
+	          links: [
+	            {
+	              label: "Paper",
+	              href: "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202101794",
+	            },
+	            {
+	              label: "Cover Art",
+	              href: "assets/publications/suh2021deep_cover.pdf",
+	            },
+	          ],
+	        },
+	      ],
+	    },
+	    {
+	      id: "suh2021boiling",
+	      title: "Deep learning predicts boiling heat transfer",
+	      authors: "Youngjoon Suh, Ramin Bostanabad, Yoonjin Won",
+	      year: 2021,
+	      topics: [],
+	      selected: false,
+	      video: "assets/publications/ColorBubble.mp4",
+	      videoAutoplay: true,
+	      venues: [
+	        {
+	          venue: "Scientific Reports, 2021, 11(1): 5622",
+	          links: [
+	            {
+	              label: "Paper",
+	              href: "https://www.nature.com/articles/s41598-021-85150-4",
+	            },
+	          ],
+	        },
+	      ],
+	    },
+	    {
+	      id: "pham2020boiling",
+	      title: "Boiling heat transfer with a well-ordered microporous architecture",
+	      authors:
+	        "Quang N Pham, Shiwei Zhang, Shuai Hao, Kimia Montazeri, Cheng-Hui Lin, Jonggyu Lee, Ali Mohraz, Yoonjin Won",
+	      year: 2020,
+	      topics: [],
+	      selected: false,
+	      thumb: "https://pubs.acs.org/cms/10.1021/acsami.0c01113/asset/images/medium/am0c01113_0006.gif",
+	      venues: [
+	        {
+	          venue: "ACS Applied Materials & Interfaces, 2020, 12(16): 19174-19183",
+	          links: [
+	            {
+	              label: "Paper",
+	              href: "https://pubs.acs.org/doi/10.1021/acsami.0c01113",
+	            },
+	          ],
+	        },
+	      ],
+	    },
     {
-      id: "suh2021deep",
-      title: "Deep learning predicts boiling heat transfer",
-      authors: "Youngjoon Suh, Ramin Bostanabad, Yoonjin Won",
-      year: 2021,
+      id: "suh2020situ",
+      title: "In situ investigation of particle clustering dynamics in colloidal assemblies using fluorescence microscopy",
+      authors: "Youngjoon Suh, Hamsa Gowda, Yoonjin Won",
+      year: 2020,
       topics: [],
-      selected: true,
-      thumb:
-        "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-021-85150-4/MediaObjects/41598_2021_85150_Fig2_HTML.png",
+      selected: false,
+      thumb: "assets/publications/suh2020colloid_cover.pdf",
       venues: [
         {
-          venue: "Scientific Reports, 2021, 11(1): 5622",
+          venue: "Journal of Colloid and Interface Science, 2020, 576: 195-202",
           links: [
             {
               label: "Paper",
-              href: "https://www.nature.com/articles/s41598-021-85150-4",
+              href: "https://www.sciencedirect.com/science/article/abs/pii/S0021979720305002",
+            },
+            {
+              label: "Cover Art",
+              href: "assets/publications/suh2020colloid_cover.pdf",
             },
           ],
         },
       ],
     },
+    {
+      id: "suh2019control",
+      title: "The Control of Colloidal Grain Boundaries through Evaporative Vertical Self-Assembly",
+      authors: "Youngjoon Suh, Quang Pham, Bowen Shao, Yoonjin Won",
+      year: 2019,
+      topics: [],
+      selected: false,
+      thumb: "assets/publications/suh2019control_cover.pdf",
+      venues: [
+        {
+          venue: "Small, 2019, 15(12): 1804523",
+          links: [
+            {
+	              label: "Paper",
+	              href: "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.201804523",
+	            },
+	            {
+	              label: "Cover Art",
+	              href: "assets/publications/suh2019control_cover.pdf",
+	            },
+	          ],
+	        },
+	      ],
+	    },
   ];
 
   const contentEl = document.getElementById("pub-content");
-  const navEl = document.querySelector(".pub-nav");
+  const navEl = document.querySelector("#publications .pub-nav");
   const toggles = Array.from(document.querySelectorAll(".pub-toggle"));
   if (!contentEl || !navEl || toggles.length === 0) return;
 
@@ -643,7 +745,7 @@
     return `<div class="pub-highlights">${hs.map((h) => `<div class="pub-highlight">${escapeHtml(h)}</div>`).join("")}</div>`;
   }
 
-  function autoThumbDataUri(p) {
+	  function autoThumbDataUri(p) {
     const title = String(p.title || "Publication").trim();
     const year = String(p.year || "").trim();
     const initials = title
@@ -682,44 +784,232 @@
   </text>
 </svg>`;
 
-    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
-  }
+	    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+	  }
 
-  function renderPubItem(p) {
-    const topics =
-      p.topics && p.topics.length
-        ? `<div class="pub-topics">${p.topics.map((t) => `<span class="chip">${escapeHtml(t)}</span>`).join("")}</div>`
-        : "";
+	  function youtubeId(url) {
+	    const raw = String(url || "");
+	    const m1 = /^https?:\/\/youtu\.be\/([A-Za-z0-9_-]{6,})/.exec(raw);
+	    const m2 =
+	      /^https?:\/\/(?:www\.)?youtube\.com\/watch\?(?:.*&)?v=([A-Za-z0-9_-]{6,})/.exec(raw) ||
+	      /^https?:\/\/(?:www\.)?youtube\.com\/shorts\/([A-Za-z0-9_-]{6,})/.exec(raw);
+	    return (m1 && m1[1]) || (m2 && m2[1]) || "";
+	  }
 
-    // Thumbnail fallback chain:
-    // 1) `p.thumb` if provided, else `assets/publications/<id>.jpg`
-    // 2) `assets/publications/default.svg` (site-wide default)
-    // 3) auto-generated SVG card (always available)
-    const thumbCandidate = p.thumb ? String(p.thumb) : `assets/publications/${p.id}.jpg`;
-    const thumbDefault = "assets/publications/default.svg";
-    const thumbAlt1 = /\.jpg$/i.test(thumbCandidate)
-      ? thumbCandidate.replace(/\.jpg$/i, ".png")
-      : /\.png$/i.test(thumbCandidate)
-        ? thumbCandidate.replace(/\.png$/i, ".jpg")
-        : "";
-    const thumbAlt2 = /\.jpe?g$/i.test(thumbCandidate)
-      ? thumbCandidate.replace(/\.jpe?g$/i, ".png")
-      : /\.png$/i.test(thumbCandidate)
-        ? thumbCandidate.replace(/\.png$/i, ".jpeg")
-        : "";
-    const thumbSrc = escapeHtml(thumbCandidate);
-    const thumb = `
-      <div class="pub-thumb">
-        <img
-          src="${thumbSrc}"
-          alt=""
-          loading="lazy"
-          onerror="if(!this.dataset.fallback && ${thumbAlt1 ? "true" : "false"}){this.dataset.fallback='alt1';this.src='${escapeHtml(thumbAlt1)}';}else if(this.dataset.fallback==='alt1' && ${thumbAlt2 ? "true" : "false"}){this.dataset.fallback='alt2';this.src='${escapeHtml(thumbAlt2)}';}else if(this.dataset.fallback!=='default'){this.dataset.fallback='default';this.src='${escapeHtml(
-            thumbDefault
-          )}';}else{this.onerror=null;this.src='${autoThumbDataUri(p)}';}"
-        />
-      </div>
-    `;
+		  function youtubeThumbUrl(url) {
+		    const id = youtubeId(url);
+		    if (!id) return "";
+		    return `https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg`;
+		  }
+
+		  function canPlayVideoMime(mime) {
+		    try {
+		      const v = document.createElement("video");
+		      const res = v.canPlayType(mime);
+		      return res === "probably" || res === "maybe";
+		    } catch {
+		      return false;
+		    }
+		  }
+
+		  function canPlayLocalVideo(url) {
+		    const raw = String(url || "");
+		    const ext = raw.split("?")[0].toLowerCase();
+		    if (/\.(mp4)$/i.test(ext)) return canPlayVideoMime("video/mp4");
+		    if (/\.(webm)$/i.test(ext)) return canPlayVideoMime("video/webm");
+		    if (/\.(mov)$/i.test(ext)) return canPlayVideoMime("video/quicktime");
+		    if (/\.(m4v)$/i.test(ext)) return canPlayVideoMime("video/x-m4v");
+		    if (/\.(avi)$/i.test(ext)) return canPlayVideoMime("video/x-msvideo");
+		    return false;
+		  }
+
+		  function youtubeEmbedUrl(url, opts) {
+		    const id = youtubeId(url);
+		    if (!id) return "";
+		    const autoplay = opts && opts.autoplay ? "1" : "0";
+		    const mute = opts && opts.autoplay ? "1" : "0";
+		    const origin =
+	      typeof location !== "undefined" && location && location.origin && location.origin !== "null"
+	        ? `&origin=${encodeURIComponent(location.origin)}`
+	        : "";
+	    return `https://www.youtube.com/embed/${encodeURIComponent(
+	      id
+	    )}?rel=0&playsinline=1&autoplay=${autoplay}&mute=${mute}${origin}`;
+	  }
+
+		  function renderPubItem(p) {
+		    const topics =
+		      p.topics && p.topics.length
+		        ? `<div class="pub-topics">${p.topics.map((t) => `<span class="chip">${escapeHtml(t)}</span>`).join("")}</div>`
+		        : "";
+
+		    // Thumbnail fallback chain:
+		    // 1) `p.thumb` if provided, else `assets/publications/<id>.jpg`
+		    // 2) `assets/publications/default.jpeg` (site-wide default)
+		    // 3) auto-generated SVG card (always available)
+		    const thumbCandidate = p.thumb ? String(p.thumb) : `assets/publications/${p.id}.jpg`;
+		    const thumbIsPdf = /\.pdf(?:\?.*)?$/i.test(thumbCandidate);
+		    const thumbDefault = "assets/publications/default.jpeg";
+		    const thumbAlt1 =
+		      !thumbIsPdf && /\.jpg$/i.test(thumbCandidate)
+		        ? thumbCandidate.replace(/\.jpg$/i, ".png")
+		        : !thumbIsPdf && /\.png$/i.test(thumbCandidate)
+		          ? thumbCandidate.replace(/\.png$/i, ".jpg")
+		          : "";
+		    const thumbAlt2 =
+		      !thumbIsPdf && /\.jpe?g$/i.test(thumbCandidate)
+		        ? thumbCandidate.replace(/\.jpe?g$/i, ".png")
+		        : !thumbIsPdf && /\.png$/i.test(thumbCandidate)
+		          ? thumbCandidate.replace(/\.png$/i, ".jpeg")
+		          : "";
+		    const thumbSrc = escapeHtml(thumbCandidate);
+		    const thumbImg = thumbIsPdf
+		      ? `
+		        <object class="pub-thumb-pdf" data="${thumbSrc}#page=1&view=FitH" type="application/pdf">
+		          <img src="${escapeHtml(thumbDefault)}" alt="" loading="lazy" />
+		        </object>
+		      `
+		      : `
+		        <img
+		          src="${thumbSrc}"
+		          alt=""
+		          loading="lazy"
+		          onerror="if(!this.dataset.fallback && ${thumbAlt1 ? "true" : "false"}){this.dataset.fallback='alt1';this.src='${escapeHtml(thumbAlt1)}';}else if(this.dataset.fallback==='alt1' && ${thumbAlt2 ? "true" : "false"}){this.dataset.fallback='alt2';this.src='${escapeHtml(thumbAlt2)}';}else if(this.dataset.fallback!=='default'){this.dataset.fallback='default';this.src='${escapeHtml(
+		            thumbDefault
+		          )}';}else{this.onerror=null;this.src='${autoThumbDataUri(p)}';}"
+		        />
+		      `;
+
+		    const isFile = typeof location !== "undefined" && location && location.protocol === "file:";
+		    const videoUrl = p.video ? String(p.video) : "";
+		    const isYouTubeVideo = Boolean(youtubeId(videoUrl));
+		    const isLocalVideo = /\.(?:mp4|webm|mov|m4v|avi)(?:\?.*)?$/i.test(videoUrl);
+		    const videoThumb = isYouTubeVideo ? youtubeThumbUrl(videoUrl) : "";
+		    const embedUrl = !isFile && videoUrl && isYouTubeVideo
+		      ? youtubeEmbedUrl(videoUrl, { autoplay: Boolean(p.videoAutoplay) })
+		      : "";
+
+		    if (videoUrl) {
+		      if (isLocalVideo && !isYouTubeVideo) {
+		        if (!canPlayLocalVideo(videoUrl)) {
+		          return `
+		            <article class="pub-item" id="${escapeHtml(p.id)}">
+		              <div class="pub-thumb is-video-fallback">
+		                <a class="pub-video-link" href="${escapeHtml(videoUrl)}" target="_blank" rel="noopener noreferrer">
+		                  ${thumbImg}
+		                  <span class="pub-video-play" aria-hidden="true"></span>
+		                </a>
+		              </div>
+		              <div class="pub-main">
+		                <div class="pub-title">${escapeHtml(p.title)}</div>
+		                <div class="pub-authors">${escapeHtml(p.authors)}</div>
+		                ${renderVenueLines(p)}
+		                ${renderHighlights(p)}
+		                ${topics}
+		              </div>
+		            </article>
+		          `;
+		        }
+
+		        const autoplay = Boolean(p.videoAutoplay);
+		        const muted = autoplay ? " muted" : "";
+		        const loop = autoplay ? " loop" : "";
+		        const autoplayAttr = autoplay ? " autoplay" : "";
+		        const controls = autoplay ? "" : " controls";
+		        return `
+	          <article class="pub-item" id="${escapeHtml(p.id)}">
+	            <div class="pub-thumb is-video is-video-file">
+	              <video
+	                src="${escapeHtml(videoUrl)}"
+	                preload="metadata"
+	                playsinline${muted}${loop}${autoplayAttr}${controls}
+	              ></video>
+	            </div>
+	            <div class="pub-main">
+	              <div class="pub-title">${escapeHtml(p.title)}</div>
+	              <div class="pub-authors">${escapeHtml(p.authors)}</div>
+	              ${renderVenueLines(p)}
+	              ${renderHighlights(p)}
+	              ${topics}
+	            </div>
+	          </article>
+	        `;
+	      }
+
+	      // If opened from file://, YouTube embeds commonly fail. Fall back to a linked thumbnail.
+	      if (isFile || !embedUrl) {
+	        return `
+	          <article class="pub-item" id="${escapeHtml(p.id)}">
+	            <div class="pub-thumb is-video-fallback">
+	              <a class="pub-video-link" href="${escapeHtml(videoUrl)}" target="_blank" rel="noopener noreferrer">
+	                ${thumbImg}
+	                <span class="pub-video-play" aria-hidden="true"></span>
+	              </a>
+	            </div>
+	            <div class="pub-main">
+	              <div class="pub-title">${escapeHtml(p.title)}</div>
+	              <div class="pub-authors">${escapeHtml(p.authors)}</div>
+	              ${renderVenueLines(p)}
+	              ${renderHighlights(p)}
+	              ${topics}
+	            </div>
+	          </article>
+	        `;
+	      }
+
+	      // Autoplay: render the iframe directly.
+	      if (p.videoAutoplay) {
+	        return `
+	          <article class="pub-item" id="${escapeHtml(p.id)}">
+	            <div class="pub-thumb is-video">
+	              <iframe
+	                src="${escapeHtml(embedUrl)}"
+	                title="${escapeHtml(p.title || "YouTube video")}"
+	                loading="lazy"
+	                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+	                allowfullscreen
+	              ></iframe>
+	            </div>
+	            <div class="pub-main">
+	              <div class="pub-title">${escapeHtml(p.title)}</div>
+	              <div class="pub-authors">${escapeHtml(p.authors)}</div>
+	              ${renderVenueLines(p)}
+	              ${renderHighlights(p)}
+	              ${topics}
+	            </div>
+	          </article>
+	        `;
+	      }
+
+	      // Click-to-play: render a thumbnail button; load iframe only after user interaction.
+	      const posterSrc = escapeHtml(p.thumb || videoThumb || thumbCandidate);
+	      return `
+	        <article class="pub-item" id="${escapeHtml(p.id)}">
+	          <div
+	            class="pub-thumb is-video is-video-placeholder"
+	            data-embed="${escapeHtml(youtubeEmbedUrl(videoUrl, { autoplay: true }))}"
+	            data-title="${escapeHtml(p.title || "YouTube video")}"
+	          >
+	            <button class="pub-video-btn" type="button" aria-label="Play video">
+	              <img src="${posterSrc}" alt="" loading="lazy" />
+	              <span class="pub-video-play" aria-hidden="true"></span>
+	            </button>
+	          </div>
+	          <div class="pub-main">
+	            <div class="pub-title">${escapeHtml(p.title)}</div>
+	            <div class="pub-authors">${escapeHtml(p.authors)}</div>
+	            ${renderVenueLines(p)}
+	            ${renderHighlights(p)}
+	            ${topics}
+	          </div>
+	        </article>
+	      `;
+	    }
+	    const thumb = `
+	      <div class="pub-thumb">
+	        ${thumbImg}
+	      </div>
+	    `;
 
     return `
       <article class="pub-item" id="${escapeHtml(p.id)}">
@@ -748,19 +1038,44 @@
 
   // Topic nav removed.
 
-  function renderSelected() {
-    navEl.innerHTML = "";
-    const items = publications.filter((p) => p.selected).sort(sortByYearDescThenTitle);
+		  function renderSelected() {
+	    const items = publications.filter((p) => p.selected).sort(sortByYearDescThenTitle);
 
-    if (items.length === 0) {
-      contentEl.innerHTML = `<p class="pub-empty">No selected publications yet.</p>`;
-      return;
-    }
+	    if (items.length === 0) {
+	      navEl.innerHTML = "";
+	      contentEl.innerHTML = `<p class="pub-empty">No selected publications yet.</p>`;
+	      return;
+	    }
 
-    contentEl.innerHTML = items.map(renderPubItem).join("");
-  }
+	    const grouped = new Map();
+	    for (const p of items) {
+	      const key = yearBucket(p.year);
+	      if (!grouped.has(key)) grouped.set(key, []);
+	      grouped.get(key).push(p);
+	    }
 
-  function renderByDate() {
+	    const years = Array.from(grouped.keys()).sort((a, b) => {
+	      if (a === `${YEAR_BUCKET_CUTOFF} and before`) return 1;
+	      if (b === `${YEAR_BUCKET_CUTOFF} and before`) return -1;
+	      return Number(b) - Number(a);
+	    });
+	    renderYearNav(years);
+
+		    contentEl.innerHTML = years
+		      .map((label) => {
+	        const slug = label === `${YEAR_BUCKET_CUTOFF} and before` ? `y-${YEAR_BUCKET_CUTOFF}-before` : `y-${label}`;
+	        const sectionItems = grouped.get(label) || [];
+	        return `
+	          <section class="pub-section" id="${escapeHtml(slug)}">
+	            <h3 class="pub-year">${escapeHtml(label)}</h3>
+	            ${sectionItems.map(renderPubItem).join("")}
+	          </section>
+	        `;
+		      })
+		      .join("");
+		  }
+
+	  function renderByDate() {
     const items = publications.slice().sort(sortByYearDescThenTitle);
     const grouped = new Map();
     for (const p of items) {
@@ -776,8 +1091,8 @@
     });
     renderYearNav(years);
 
-    contentEl.innerHTML = years
-      .map((label) => {
+	    contentEl.innerHTML = years
+	      .map((label) => {
         const slug = label === `${YEAR_BUCKET_CUTOFF} and before` ? `y-${YEAR_BUCKET_CUTOFF}-before` : `y-${label}`;
         const sectionItems = grouped.get(label) || [];
         return `
@@ -786,9 +1101,30 @@
             ${sectionItems.map(renderPubItem).join("")}
           </section>
         `;
-      })
-      .join("");
-  }
+	      })
+	      .join("");
+	  }
+
+	  // Delegate click-to-play for video placeholders.
+	  contentEl.addEventListener("click", (e) => {
+	    const btn = e.target && e.target.closest ? e.target.closest(".pub-video-btn") : null;
+	    if (!btn) return;
+	    const wrapper = btn.closest(".pub-thumb.is-video-placeholder");
+	    if (!wrapper) return;
+	    const embed = wrapper.getAttribute("data-embed") || "";
+	    const title = wrapper.getAttribute("data-title") || "YouTube video";
+	    if (!embed) return;
+	    wrapper.classList.remove("is-video-placeholder");
+	    wrapper.innerHTML = `
+	      <iframe
+	        src="${escapeHtml(embed)}"
+	        title="${escapeHtml(title)}"
+	        loading="lazy"
+	        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+	        allowfullscreen
+	      ></iframe>
+	    `;
+	  });
 
   // Topic view removed.
 

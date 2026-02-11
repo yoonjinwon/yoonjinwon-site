@@ -175,7 +175,7 @@ a:hover {
 .media-grid {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -206,12 +206,31 @@ a:hover {
   display: block;
 }
 
+.media-card-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .media-card-image.is-empty {
   background: linear-gradient(
     135deg,
     color-mix(in srgb, var(--navy) 10%, #fff),
     color-mix(in srgb, var(--navy) 2%, #fff)
   );
+}
+
+.media-card-embed {
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.media-card-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .media-card-body {
@@ -247,6 +266,26 @@ a:hover {
   overflow: hidden;
 }
 
+.media-card-actions {
+  margin-top: 10px;
+}
+
+.media-card-link {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.media-card-link:hover {
+  text-decoration: none;
+  border-color: color-mix(in srgb, var(--navy) 40%, var(--border));
+  background: color-mix(in srgb, var(--navy) 7%, #fff);
+}
+
 .media-list {
   margin: 12px 0 0;
   padding-left: 18px;
@@ -277,6 +316,10 @@ a:hover {
   align-items: center;
 }
 
+.pub-controls .pub-toggle {
+  font-size: 14px;
+}
+
 .talks-controls {
   display: inline-flex;
   gap: 8px;
@@ -291,6 +334,18 @@ a:hover {
   border: 1px solid var(--border);
   background: #fff;
   color: var(--text);
+  font-weight: 500;
+}
+
+.talks-control:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--navy) 35%, #fff);
+  outline-offset: 2px;
+}
+
+.talks-control.is-active {
+  border-color: color-mix(in srgb, var(--navy) 60%, var(--border));
+  background: color-mix(in srgb, var(--navy) 12%, #fff);
+  color: var(--navy);
   font-weight: 700;
 }
 
@@ -300,36 +355,31 @@ a:hover {
   background: color-mix(in srgb, var(--navy) 7%, #fff);
 }
 
-.talks-view-all {
-  display: none;
+.talks-type-heading {
+  margin: 16px 0 6px;
+  font-size: 16px;
 }
 
-.talks-view-recent {
-  display: block;
-}
-
-#talks-all:target {
-  display: block;
-}
-
-#talks-all:target ~ #talks-recent {
-  display: none;
+.talks-type-section {
+  scroll-margin-top: 90px;
 }
 
 .pub-toggle {
   appearance: none;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   background: #fff;
   color: var(--text);
   font: inherit;
-  padding: 6px 10px;
+  padding: 8px 14px;
   border-radius: 999px;
   cursor: pointer;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .pub-toggle.is-active {
-  border-color: color-mix(in srgb, var(--navy) 60%, var(--border));
-  background: color-mix(in srgb, var(--navy) 12%, #fff);
+  border-color: var(--navy);
+  background: #fff;
   color: var(--navy);
   font-weight: 700;
 }
@@ -339,6 +389,11 @@ a:hover {
   outline-offset: 2px;
 }
 
+.pub-toggle:hover {
+  border-color: color-mix(in srgb, var(--navy) 30%, var(--border));
+  text-decoration: none;
+}
+
 .pub-nav {
   margin: 10px 0 0;
 }
@@ -346,22 +401,44 @@ a:hover {
 .pub-nav-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 10px;
+  gap: 10px 14px;
   align-items: center;
 }
 
 .pub-nav-label {
-  color: var(--muted);
-  font-weight: 700;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 20px;
 }
 
 .pub-nav-link {
   display: inline-block;
-  padding: 2px 8px;
+  padding: 8px 16px;
   border-radius: 999px;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   background: #fff;
-  color: var(--link);
+  color: var(--purple);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.pub-nav-link:hover {
+  text-decoration: none;
+  border-color: color-mix(in srgb, var(--purple) 35%, var(--border));
+  background: color-mix(in srgb, var(--purple) 6%, #fff);
+}
+
+/* Talks "type" pills (Keynote / Invited / Panel / Talk) */
+.talks-nav .pub-nav-label,
+.talks-nav .pub-nav-link {
+  font-size: 14px;
+}
+
+/* Publications "year" pills */
+#publications .pub-nav-label,
+#publications .pub-nav-link {
+  font-size: 14px;
 }
 
 .pub-content {
@@ -395,11 +472,92 @@ a:hover {
   aspect-ratio: 16 / 10;
 }
 
+.pub-thumb.is-video {
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.pub-thumb.is-video-placeholder,
+.pub-thumb.is-video-fallback {
+  position: relative;
+}
+
+.pub-video-btn,
+.pub-video-link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.pub-video-btn img,
+.pub-video-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pub-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 54px;
+  height: 54px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.pub-video-play::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-35%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.92);
+}
+
+.pub-video-btn:hover .pub-video-play,
+.pub-video-link:hover .pub-video-play {
+  background: rgba(0, 0, 0, 0.68);
+}
+
 .pub-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.pub-thumb iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.pub-thumb-pdf {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.pub-thumb video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .pub-thumb.is-missing {
@@ -577,7 +735,8 @@ a:hover {
   }
 
   .media-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .columns {
